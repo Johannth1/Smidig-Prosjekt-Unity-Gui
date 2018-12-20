@@ -231,6 +231,7 @@ MonoBehaviour:
   spillerText: {fileID: 2066814073}
   Choice1: {fileID: 1767489714}
   Choice2: {fileID: 446445963}
+  animator: {fileID: 1782112758}
 --- !u!4 &107774682
 Transform:
   m_ObjectHideFlags: 0
@@ -1668,7 +1669,7 @@ Animator:
   m_GameObject: {fileID: 1782112753}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1dcc776172afd014eb3ac4e71d6ae770, type: 2}
+  m_Controller: {fileID: 9100000, guid: a6a13e3d130e8f24fb2b9cc8893ebe4f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

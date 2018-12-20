@@ -15,6 +15,7 @@ public class DialogManager : MonoBehaviour
     public Text Choice2;
     private Queue<string> sentence;
     private Queue<string> choice;
+    public Animator animator;
 
     void Start(){
     sentence = new Queue<string>();
@@ -24,6 +25,7 @@ public class DialogManager : MonoBehaviour
     public void StartDialog(Dialog dialog, Choices choices){
         Debug.Log("Starting conversation with " + dialog.navn);
 
+        animator.SetBool("isOpen", true);
         nameText.text = dialog.navn;
         sentence.Clear();
         choice.Clear();
@@ -47,12 +49,21 @@ public class DialogManager : MonoBehaviour
             Choice2.text = choice.Dequeue();
             valgUi.SetActive(true);
             EndDialog();
-            return;}
+            return;
+            }
         }
 
         string dialogLine = sentence.Dequeue();
-        dialogText.text = dialogLine;
-        Debug.Log(dialogLine);
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(dialogLine));
+    }
+
+    IEnumerator TypeSentence (string sentence){
+        dialogText.text = "";
+        foreach (char letter in sentence.ToCharArray()){
+            dialogText.text += letter;
+            yield return null;
+        }
     }
 
     public void DisplayChoiceText(GameObject choice){
@@ -62,6 +73,7 @@ public class DialogManager : MonoBehaviour
     }
 
     void EndDialog(){
+                animator.SetBool("isOpen", false);
         Debug.Log("End of conversation");
     }
     void EndChoice(){
