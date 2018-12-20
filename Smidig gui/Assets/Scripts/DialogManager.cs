@@ -41,12 +41,13 @@ public class DialogManager : MonoBehaviour
 
     public void DisplayNextSentence() {
         if(sentence.Count == 0){
+            if(choice.Count != 0){
             skuespillerTekst.SetActive(false);
             Choice1.text = choice.Dequeue();
             Choice2.text = choice.Dequeue();
             valgUi.SetActive(true);
             EndDialog();
-            return;
+            return;}
         }
 
         string dialogLine = sentence.Dequeue();
@@ -54,7 +55,16 @@ public class DialogManager : MonoBehaviour
         Debug.Log(dialogLine);
     }
 
+    public void DisplayChoiceText(GameObject choice){
+        valgUi.SetActive(false);
+        spillerText.text = choice.GetComponent<Text>().text;
+        SpillerTekst.SetActive(true);
+    }
+
     void EndDialog(){
         Debug.Log("End of conversation");
+    }
+    void EndChoice(){
+        Debug.Log("End of choices");
     }
 }
