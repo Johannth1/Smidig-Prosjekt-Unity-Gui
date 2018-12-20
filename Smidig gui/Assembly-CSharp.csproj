@@ -54,8 +54,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButtonManager.cs" />
+     <Compile Include="Assets\Scripts\Dialog.cs" />
+     <Compile Include="Assets\Scripts\DialogManager.cs" />
+     <Compile Include="Assets\Scripts\DialogTrigger.cs" />
      <Compile Include="Assets\Scripts\Scene1text.cs" />
-     <Compile Include="Assets\Scripts\TextScript.cs" />
+     <Compile Include="Assets\Scripts\StartScene.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/xaviu/Documents/GitHub/Smidig-prosjekt/Smidig gui/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
