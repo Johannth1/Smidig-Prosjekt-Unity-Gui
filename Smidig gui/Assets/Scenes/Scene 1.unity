@@ -223,6 +223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d993a657500e7e94e84e40de52f4d415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 316598837}
+  dialogText: {fileID: 198273764}
 --- !u!4 &107774682
 Transform:
   m_ObjectHideFlags: 0
@@ -841,9 +843,9 @@ MonoBehaviour:
   dialog:
     navn: Magnhild Johannsdotter
     sentences:
-    - 1
-    - 2
-    - 3
+    - Du! Fremmede, i guds navn hjelp meg i min fortvilelse
+    - "En Engelsmaker mishandler min kj\xE6re s\xF8nn, Olaf!"
+    - "Det er jeg klar over, men jeg har ingen andre \xE5 vende meg til"
 --- !u!1 &585754509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,7 +1161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -58.610313, y: 147.0443}
+  m_AnchoredPosition: {x: 0.000019073, y: 0}
   m_SizeDelta: {x: 500, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296651255
@@ -1694,8 +1696,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 484878973}
-        m_MethodName: TriggerDialog
+      - m_Target: {fileID: 107774681}
+        m_MethodName: DisplayNextSentence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
