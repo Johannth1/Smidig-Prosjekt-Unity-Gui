@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-
+    public GameObject skuespillerTekst;
+    public GameObject SpillerTekst;
+    public GameObject valgUi;
     public Text nameText;
     public Text dialogText;
+    public Text spillerText;
     public Text Choice1;
     public Text Choice2;
-     private Queue<string> sentence;
+    private Queue<string> sentence;
+    private Queue<string> choice;
 
     void Start(){
     sentence = new Queue<string>();
@@ -22,9 +26,14 @@ public class DialogManager : MonoBehaviour
 
         nameText.text = dialog.navn;
         sentence.Clear();
+        choice.Clear();
 
         foreach(string line in dialog.sentences){
             sentence.Enqueue(line);
+        }
+
+        foreach(string line in choices.choices){
+            choice.Enqueue(line);
         }
 
         DisplayNextSentence();
@@ -32,6 +41,10 @@ public class DialogManager : MonoBehaviour
 
     public void DisplayNextSentence() {
         if(sentence.Count == 0){
+            skuespillerTekst.SetActive(false);
+            Choice1.text = choice.Dequeue();
+            Choice2.text = choice.Dequeue();
+            valgUi.SetActive(true);
             EndDialog();
             return;
         }
