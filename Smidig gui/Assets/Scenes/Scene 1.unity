@@ -224,11 +224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skuespillerTekst: {fileID: 198273762}
-  SpillerTekst: {fileID: 2066814071}
   valgUi: {fileID: 1613032996}
   nameText: {fileID: 316598837}
   dialogText: {fileID: 198273764}
-  spillerText: {fileID: 2066814073}
   Choice1: {fileID: 1767489714}
   Choice2: {fileID: 446445963}
   animator: {fileID: 2027769266}
@@ -878,8 +876,6 @@ MonoBehaviour:
     - Hva er en englemaker?
     - "Dette ang\xE5r meg aldeles ikke, beklager."
     - "Ja self\xF8lgelig."
-    - Hvor bor han?
-    - "Hvorfor gj\xF8r englemarkerne slik?"
 --- !u!1 &585754509
 GameObject:
   m_ObjectHideFlags: 0

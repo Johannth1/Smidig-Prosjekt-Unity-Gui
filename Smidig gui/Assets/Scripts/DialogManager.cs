@@ -43,22 +43,21 @@ public class DialogManager : MonoBehaviour
     }
 
     public void DisplayNextSentence() {
-        if(sentence.Count == 0 || SentenceCount == 1 || SentenceCount == 3){
-            if(choice.Count != 0){
-            skuespillerTekst.SetActive(false);
-            Choice1.text = choice.Dequeue();
-            Choice2.text = choice.Dequeue();
-            valgUi.SetActive(true);
+        if(sentence.Count != 0 || choice.Count != 0){
+            if(SentenceCount == 0 || SentenceCount == 2 || SentenceCount == 4 || SentenceCount == 6 
+                || SentenceCount == 7 || SentenceCount == 9 || SentenceCount == 11 || SentenceCount == 13 || SentenceCount == 15){
+              string dialogLine = sentence.Dequeue();
+              StopAllCoroutines();
+               StartCoroutine(TypeSentence(dialogLine));
+               Debug.Log(SentenceCount);
+              SentenceCount++;
+              return;
             }
+        skuespillerTekst.SetActive(false);
+        Choice1.text = choice.Dequeue();
+        Choice2.text = choice.Dequeue();
+        valgUi.SetActive(true);
         }
-        
-
-        string dialogLine = sentence.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(dialogLine));
-        Debug.Log(SentenceCount);
-        SentenceCount++;
-        
     }
 
     IEnumerator TypeSentence (string sentence){
@@ -73,6 +72,8 @@ public class DialogManager : MonoBehaviour
         valgUi.SetActive(false);
         dialogText.text = choice.GetComponent<Text>().text;
         skuespillerTekst.SetActive(true);
+        SentenceCount++;
+
     }
 
     void EndDialog(){
