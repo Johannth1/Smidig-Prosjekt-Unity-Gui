@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 324}
   m_MaxSize: {x: 12008, y: 8024}
   vertical: 0
-  controlID: 1067
+  controlID: 94
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 324}
   m_MaxSize: {x: 8006, y: 8024}
   vertical: 1
-  controlID: 1068
+  controlID: 95
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 1069
+  controlID: 96
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -383,9 +383,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: d4fbffffa40c0000bc0c0000ce0c0000
+      m_SelectedIDs: 7a0c0000
+      m_LastClickedID: 3194
+      m_ExpandedIDs: d4fbffff5a0c0000880c0000a40c0000bc0c0000ce0c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 337.33896, y: 295.1007, z: -797.1682}
+    m_Target: {x: 468.39532, y: -68.16406, z: -792.9495}
     speed: 2
-    m_Value: {x: 337.33896, y: 295.1007, z: -797.1682}
+    m_Value: {x: 468.39532, y: -68.16406, z: -792.9495}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -474,9 +474,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2271.3496
+    m_Target: 1759.2617
     speed: 2
-    m_Value: 2271.3496
+    m_Value: 1759.2617
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\xaviu\Documents\GitHub\Smidig-prosjekt\Smidig gui
+  m_LastProjectPath: C:\Users\Henrik\Documents\GitHub\Smidig-prosjekt\Smidig gui
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -593,7 +593,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007009000000ca9a3b
+    m_ExpandedIDs: 0000000070090000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000a26800004285000040860000862f00001cd50000ce3a0000443a00008a280000302f000030e8ffff302600000000000076260000702800001a2c0000822d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

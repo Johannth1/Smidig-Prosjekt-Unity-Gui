@@ -848,34 +848,29 @@ MonoBehaviour:
   dialog:
     navn: Magnhild Johannsdotter
     sentences:
-    - Du! Fremmede, i guds navn hjelp meg i min fortvilelse
-    - "En Engelsmaker mishandler min kj\xE6re s\xF8nn, Olaf! "
-    - "Det er jeg klar over, men jeg har ingen andre \xE5 vende meg til.  "
+    - Du! Fremmede, i guds navn hjelp meg i min fortvilelse:c0
+    - "En Engelsmaker mishandler min kj\xE6re s\xF8nn, Olaf!:s0"
+    - "Det er jeg klar over, men jeg har ingen andre \xE5 vende meg til.:s0"
     - "Uff, jeg klarte ikke fors\xF8rge Olaf og ville ikke sp\xF8rre Fattigvesenet
-      om hjelp. Jeg ga mine siste shillinger til en herremann som kunne ta Olaf midlertidig."
+      om hjelp. Jeg ga mine siste shillinger til en herremann som kunne ta Olaf midlertidig.:s0"
     - "Men n\xE5 h\xF8rer jeg rykter om at han er en englemaker, og at Olaf aldeles
-      ikke har det bra!"
+      ikke har det bra!:s0"
     - "Overhodet ikke, Olaf er i store vanskeligheter. Englemakeren har planer om
-      \xE5 drepe ham!"
+      \xE5 drepe ham!:s0"
     - "Jeg m\xE5 konfrontere englemakeren f\xF8r noe hender med Olaf, men jeg er svak
-      og ikke i stand til \xE5 gj\xF8re det alene. Kan du hjelpe?"
-    - Du er min reddende engel! Det kan ikke sies om de som har dette grufulle yrket
+      og ikke i stand til \xE5 gj\xF8re det alene. Kan du hjelpe?:s0"
+    - Du er min reddende engel! Det kan ikke sies om de som har dette grufulle yrket:s0
     - "Fordi hvis barnet de fors\xF8rger d\xF8r, kan de ta inn et nytt og f\xE5 ny
-      betaling"
+      betaling:s0"
+    - En fortvilet mor som har gjort et forferdelig veivalg.:s0
   choices:
     choices:
-    - Hva er det som hender?
-    - Hvem er du?
-    - "Uff, beklager men dette ang\xE5r meg ikke"
-    - "Dette m\xE5 du forklare bedre"
-    - Dette er en sak for fattigvesenet
-    - Hva handler dette om da?
-    - Omforlades, men er ikke dette godt for Dem?
-    - Hva er en englemaker?
-    - "Jeg forst\xE5r. Hva kan jeg gj\xF8re?"
-    - Hva er en englemaker?
-    - "Dette ang\xE5r meg aldeles ikke, beklager."
-    - "Ja self\xF8lgelig."
+    - Hva er det som hender?:s1=Hvem er du?:s9
+    - "Uff, beklager men dette ang\xE5r meg ikke:s0=Dette m\xE5 du forklare bedre:s0"
+    - Dette er en sak for fattigvesenet:s0=Hva handler dette om da?:s0
+    - Omforlades, men er ikke dette godt for Dem?:s0=Hva er en englemaker?:s0
+    - "Jeg forst\xE5r. Hva kan jeg gj\xF8re?:s0=Hva er en englemaker?:s0"
+    - "Dette ang\xE5r meg aldeles ikke, beklager.:s0=Ja self\xF8lgelig.:s0"
 --- !u!1 &585754509
 GameObject:
   m_ObjectHideFlags: 0
