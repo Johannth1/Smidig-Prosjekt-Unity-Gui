@@ -4,35 +4,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class DialogManager : MonoBehaviour
 {
     public GameObject skuespillerTekst;
     public GameObject valgUi;
+    public GameObject sceneBackground;
     public Text nameText;
     public Text dialogText;
     public Text Choice1;
     public Text Choice2;
+    private List<VideoClip> BackgroundClips;
     private List<string> sentence;
     private List<string> choice;
     public Animator animator;
 	string nextDialogueElement;
 	string choice1Info;
 	string choice2Info;
+    int sceneCount = 0;
+
 
 
 	void Start(){
     sentence = new List<string>();
     choice = new List<string>();
+    BackgroundClips = new List<VideoClip>();
     }
 
-    public void StartDialog(Dialog dialog, Choices choices){
+    public void StartDialog(Dialog dialog, Choices choices, Videoclips clips){
         Debug.Log("Starting conversation with " + dialog.navn);
-
         animator.SetBool("isOpen", true);
         nameText.text = dialog.navn;
         sentence.Clear();
         choice.Clear();
+        BackgroundClips.Clear();
 		nextDialogueElement = "s0";
 
 
@@ -44,12 +50,24 @@ public class DialogManager : MonoBehaviour
 			choice.Add(line);
 		}
 
+        foreach(VideoClip clip in clips.clips){
+            BackgroundClips.Add(clip);
+        }
+
+        ChangeScene(BackgroundClips[sceneCount]);
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence() {
 		bool nextIsSentence = nextDialogueElement[0] == 's';
 		int elementIndex = Int32.Parse(nextDialogueElement.Substring(1));
+
+        if(dialogText.Equals("Du er min reddende engel! Det kan ikke sies om de som har dette grufulle yrket:s0")){
+                    ChangeScene(BackgroundClips[sceneCount]);
+        }
+
+
+
 
 		if (nextIsSentence)
 		{
@@ -102,5 +120,11 @@ public class DialogManager : MonoBehaviour
     }
     void EndChoice(){
         Debug.Log("End of choices");
+    }
+
+
+    void ChangeScene(VideoClip background) {
+     sceneBackground.GetComponent<VideoPlayer>().clip = background;
+             sceneCount++;
     }
 }

@@ -225,6 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skuespillerTekst: {fileID: 198273762}
   valgUi: {fileID: 1613032996}
+  sceneBackground: {fileID: 269956421}
   nameText: {fileID: 316598837}
   dialogText: {fileID: 198273764}
   Choice1: {fileID: 1767489714}
@@ -427,7 +428,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269956421}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 70e091d9fad696a489a44b1eb5dd2ad9, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 14735928}
@@ -849,28 +850,40 @@ MonoBehaviour:
     navn: Magnhild Johannsdotter
     sentences:
     - Du! Fremmede, i guds navn hjelp meg i min fortvilelse:c0
-    - "En Engelsmaker mishandler min kj\xE6re s\xF8nn, Olaf!:s0"
-    - "Det er jeg klar over, men jeg har ingen andre \xE5 vende meg til.:s0"
+    - "En Engelsmaker mishandler min kj\xE6re s\xF8nn, Olaf!:c1"
+    - "Det er jeg klar over, men jeg har ingen andre \xE5 vende meg til.:c2"
     - "Uff, jeg klarte ikke fors\xF8rge Olaf og ville ikke sp\xF8rre Fattigvesenet
-      om hjelp. Jeg ga mine siste shillinger til en herremann som kunne ta Olaf midlertidig.:s0"
+      om hjelp. Jeg ga mine siste shillinger til en herremann som kunne ta Olaf midlertidig.:s4"
     - "Men n\xE5 h\xF8rer jeg rykter om at han er en englemaker, og at Olaf aldeles
-      ikke har det bra!:s0"
+      ikke har det bra!:c3"
     - "Overhodet ikke, Olaf er i store vanskeligheter. Englemakeren har planer om
-      \xE5 drepe ham!:s0"
+      \xE5 drepe ham!:c4"
     - "Jeg m\xE5 konfrontere englemakeren f\xF8r noe hender med Olaf, men jeg er svak
-      og ikke i stand til \xE5 gj\xF8re det alene. Kan du hjelpe?:s0"
+      og ikke i stand til \xE5 gj\xF8re det alene. Kan du hjelpe?:c5"
     - Du er min reddende engel! Det kan ikke sies om de som har dette grufulle yrket:s0
+    - "Jeg m\xE5 konfrontere englemakeren f\xF8r noe hender med Olaf, men jeg er svak
+      og ikke i stand til \xE5 gj\xF8re det alene. Kan du hjelpe?:c5"
+    - En fortvilet mor som har gjort et forferdelig veivalg.:c6
+    - Han skal holde til nederst i Fred.Olsens Gate:s0
     - "Fordi hvis barnet de fors\xF8rger d\xF8r, kan de ta inn et nytt og f\xE5 ny
-      betaling:s0"
-    - En fortvilet mor som har gjort et forferdelig veivalg.:s0
+      betaling"
+    - Mission failed, we'll get em next time:s0
+    - Mitt navn er Magnhild, mor til to, og har blitt kastet ut fra mitt hjem:s3
+    - Vet du ikke det?:s8
   choices:
     choices:
     - Hva er det som hender?:s1=Hvem er du?:s9
-    - "Uff, beklager men dette ang\xE5r meg ikke:s0=Dette m\xE5 du forklare bedre:s0"
-    - Dette er en sak for fattigvesenet:s0=Hva handler dette om da?:s0
-    - Omforlades, men er ikke dette godt for Dem?:s0=Hva er en englemaker?:s0
-    - "Jeg forst\xE5r. Hva kan jeg gj\xF8re?:s0=Hva er en englemaker?:s0"
-    - "Dette ang\xE5r meg aldeles ikke, beklager.:s0=Ja self\xF8lgelig.:s0"
+    - "Uff, beklager men dette ang\xE5r meg ikke:s2=Dette m\xE5 du forklare bedre:s3"
+    - Dette er en sak for fattigvesenet:s12=Hva handler dette om da?:s10
+    - Omforlades, men er ikke dette godt for Dem?:s5=Hva er en englemaker?:s14
+    - "Jeg forst\xE5r. Hva kan jeg gj\xF8re?:s6=Hva er en englemaker?:s14"
+    - "Dette ang\xE5r meg aldeles ikke, beklager.:s12=Ja self\xF8lgelig.:s7"
+    - "Hva har du gjort?.:s3=Det svarer ikke p\xE5 hvem du er:s13"
+  clips:
+    clips:
+    - {fileID: 32900000, guid: 70e091d9fad696a489a44b1eb5dd2ad9, type: 3}
+    - {fileID: 32900000, guid: 672a0fedaece1c94b99411644549eb15, type: 3}
+    - {fileID: 0}
 --- !u!1 &585754509
 GameObject:
   m_ObjectHideFlags: 0
